@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Component Details</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f9;
+            padding:40px;
+        }
+
+        .box{
+            background:white;
+            padding:30px;
+            max-width:400px;
+            margin:auto;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            text-align:center;
+        }
+
+        p{
+            font-size:16px;
+            margin:8px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Component Information</h2>
+
+    <p id="part"></p>
+    <p id="serial"></p>
+    <p id="batch"></p>
+
+    <hr>
+
+    <p>Manufactured At: HAL Bangalore</p>
+    <p>Exported: No</p>
+    <p>Expiry Date: 2028</p>
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+let part = params.get("part");
+let serial = params.get("serial");
+let batch = params.get("batch");
+
+document.getElementById("part").innerText = "Part Number: " + part;
+document.getElementById("serial").innerText = "Serial Number: " + serial;
+document.getElementById("batch").innerText = "Batch Number: " + batch;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAL Component QR Generator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QR Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <h3>Generate Component QR Code</h3>
+        <p>Enter component details to generate a unique QR code</p>
+
+        <label>Part Number</label>
+        <input type="text" id="Part" placeholder="Enter Part Number">
+
+        <label>Serial Number</label>
+        <input type="text" id="Serial" placeholder="Enter Serial Number">
+
+        <label>Lot / Batch Number</label>
+        <input type="text" id="Log" placeholder="Enter Lot/Batch Number">
+
+        <label>Manufacturing Type</label>
+        <select id="manufacturingtype">
+            <option value="">-- Select Manufacturing Type --</option>
+            <option value="Manufactured in this HAL Unit">Manufactured in this HAL Unit</option>
+            <option value="Imported from another HAL Unit">Imported from another HAL Unit</option>
+        </select>
+
+        <label>Expiry Date</label>
+        <input type="date" id="Expiry">
+
+        <button onclick="generateQR()">Generate QR Code</button>
+
+        <div id="qrcode" style="margin-top:20px;"></div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
